@@ -28,28 +28,28 @@ into your Flutter app.
 Before you begin, ensure you have:
 
 - [Installed the Flutter
-  SDK](/realm/sdk/flutter/install#std-label-flutter-install)
+  SDK](./install#installation)
 
 :::note Local Realm Database Only
 
 The Flutter SDK currently only supports local Realm Database. You cannot
 use the Flutter SDK to connect to [MongoDB Realm application
-services](/realm/cloud#std-label-realm-cloud) or use [Realm
-Sync](/realm/sync/learn/overview#std-label-sync).
+services](https://docs.mongodb.com/realm/cloud#std-label-realm-cloud) or use [Realm
+Sync](https://docs.mongodb.com/realm/sync/learn/overview#std-label-sync).
 
 :::
 
-# Define Your Object Model
+## Define Your Object Model
 
 Your application's **data model** defines the structure of data stored
 within Realm Database. You can define your application's data model via
 Dart classes in your application code with [Realm Object
-Models](/realm/sync/data-model/create-a-schema#std-label-create-schema-from-rom).
+Models](https://docs.mongodb.com/realm/sync/data-model/create-a-schema#std-label-create-schema-from-rom).
 You then have to generate the
 [RealmObject](https://pub.dev/documentation/realm/latest/realm/RealmObject-class.html)
 class that's used within your application.
 
-## Create Data Model
+### Create Data Model
 
 To define your application's data model, add a Realm model class
 definition to your application code.
@@ -82,7 +82,7 @@ Some considerations when defining your Realm model class:
 
 </Tabs>
 
-## Generate RealmObject Class
+### Generate RealmObject Class
 
 Now generate a RealmObject class `Car` from the data model class `Car`:
 
@@ -131,7 +131,7 @@ dart run realm_dart generate --watch
 
 </Tabs>
 
-# Open a Realm
+## Open a Realm
 
 Use the
 [Configuration](https://pub.dev/documentation/realm/latest/realm/Configuration-class.html)
@@ -149,13 +149,13 @@ to generate an instance of that realm:
 You can now use that realm instance to work with objects in the
 database.
 
-# Work with Realm Objects
+## Work with Realm Objects
 
 Once you've opened a realm, you can create objects within it using a
 [write transaction
 block](https://pub.dev/documentation/realm/latest/realm/Realm/write.html).
 
-## Create Objects
+### Create Objects
 
 To create a new `Car`, instantiate an instance of the `Car` class and
 add it to the realm in a write transaction block:
@@ -164,7 +164,7 @@ add it to the realm in a write transaction block:
   {QuickStartTestCodeblockCreateRealmObjectDart}
 </CodeBlock>
 
-## Update Objects
+### Update Objects
 
 To modify a car, update its properties in a write transaction block:
 
@@ -172,7 +172,7 @@ To modify a car, update its properties in a write transaction block:
   {QuickStartTestCodeblockUpdateRealmObjectDart}
 </CodeBlock>
 
-## Query for Objects
+### Query for Objects
 
 Retrieve a collection of all objects of a data model in the realm with
 the
@@ -198,7 +198,7 @@ syntax](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptu
   {QuickStartTestCodeblockQueryRealmObjectsWithSortDart}
 </CodeBlock>
 
-## Delete Objects
+### Delete Objects
 
 Delete a car by calling the
 [Realm.delete()](https://pub.dev/documentation/realm/latest/realm/Realm/delete.html)
@@ -208,13 +208,15 @@ method in a write transaction block:
   {QuickStartTestCodeblockDeleteOneRealmObjectDart}
 </CodeBlock>
 
-Delete multiple cars with the `Realm.deleteMany() <realm/Realm/deleteMany.html>` method in a write transaction block.
+Delete multiple cars with the
+[Realm.deleteMany()](https://pub.dev/documentation/realm/latest/realm/Realm/deleteMany.html)
+method in a write transaction block.
 
 <CodeBlock className="language-dart">
   {QuickStartTestCodeblockDeleteManyRealmObjectsDart}
 </CodeBlock>
 
-# Close a Realm
+## Close a Realm
 
 Once you've finished working with a realm, close it to prevent memory
 leaks.
@@ -223,7 +225,7 @@ leaks.
   {OpenRealmTestCodeblockCloseRealmDart}
 </CodeBlock>
 
-# Further Examples
+## Further Examples
 
 For further examples of all the Flutter SDK methods described above and
 more, refer to the [Realm Dart Samples Github

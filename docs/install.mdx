@@ -3,13 +3,13 @@ title: Install Realm
 sidebar_position: 2
 ---
 
-# Prerequisites
+## Prerequisites
 
 - [Install Flutter in your development
   environment](https://docs.flutter.dev/get-started/install). You must
   use Flutter version 2.8 or later and Dart version 2.15.0 or later.
 
-# Installation
+## Installation
 
 Follow these steps to add the Realm Flutter SDK to your Flutter project.
 
@@ -22,11 +22,11 @@ The usage for Realm with Dart is the same as the Flutter SDK, except you
 must install and set up a separate package.
 
 [Learn how to set up Realm in your Dart
-project.](/realm/sdk/flutter/install#std-label-dart-install-steps)
+project.](#dart-standalone-installation)
 
 :::
 
-## 1. Create a Flutter Project
+### 1. Create a Flutter Project
 
 Create a Flutter project. Follow the instructions in the [Flutter
 documentation](https://docs.flutter.dev/get-started/test-drive?tab=terminal).
@@ -36,7 +36,7 @@ flutter create <app_name>
 cd <app_name>
 ```
 
-## 2. Add Realm to the Project
+### 2. Add Realm to the Project
 
 To add the [Realm Flutter SDK](https://pub.dev/packages/realm) to your
 project, run the command:
@@ -53,7 +53,7 @@ dependencies:
   realm: <latest_version>
 ```
 
-## 3. Import Realm Package
+### 3. Import Realm Package
 
 To use the Realm Flutter SDK within your app, import the package into
 files where you will use it:
@@ -62,7 +62,7 @@ files where you will use it:
 import 'package:realm/realm.dart';
 ```
 
-# Dart Standalone Installation
+## Dart Standalone Installation
 
 To use Realm with Dart but not Flutter, there is a separate Dart SDK
 package with its own installation process. The Dart SDK can be used for
@@ -70,7 +70,7 @@ CLI applications or when running Dart in a server environment. The Dart
 standalone package `realm_dart` has the same usage as the Flutter
 package.
 
-## 1. Create a Dart Project
+### 1. Create a Dart Project
 
 Create a Dart project.
 
@@ -83,7 +83,7 @@ Dart without Flutter for CLI and server use cases.
 
 :::
 
-## 2. Add Realm to the Project
+### 2. Add Realm to the Project
 
 To add the [Realm Dart SDK](https://pub.dev/packages/realm_dart) to your
 project, run the command:
@@ -100,7 +100,7 @@ dependencies:
   realm_dart: <latest_version>
 ```
 
-## 3. Install Realm into Application
+### 3. Install Realm into Application
 
 Install the `realm_dart` package into the application. This downloads
 and copies the required native binaries to the app directory.
@@ -109,7 +109,7 @@ and copies the required native binaries to the app directory.
 dart run realm_dart install
 ```
 
-## 4. Import Realm Package
+### 4. Import Realm Package
 
 To use the Realm Dart SDK within your app, import the package into files
 where you will use it:

@@ -30,13 +30,13 @@ This explanation begins with a deep dive into database internals,
 continues with a high-level introduction to some of the features of
 Realm Database.
 
-# Database Internals
+## Database Internals
 
 Realm Database uses a completely unique database engine, file format,
 and design. This section describes some of the high-level details of
 those choices.
 
-## Native Database Engine
+### Native Database Engine
 
 Realm Database is an entire database written from scratch in C++,
 instead of building on top of an underlying database engine like SQLite.
@@ -62,7 +62,7 @@ Realm Database uses a
 [zero-copy](https://en.wikipedia.org/wiki/Zero-copy) design to make
 queries faster than an ORM, and often faster than raw SQLite.
 
-## Realm Files
+### Realm Files
 
 Realm Database persists data in files saved on device storage. The
 database uses several kinds of file:
@@ -104,7 +104,7 @@ ref. As Realm Database uses memory mapping to read and write data,
 database operations translate these refs from offsets to memory pointers
 when navigating database structures.
 
-## Copy-on-Write: The Secret Sauce of Data Versioning
+### Copy-on-Write: The Secret Sauce of Data Versioning
 
 Realm Database uses a technique called **copy-on-write**, which copies
 data to a new location on disk for every write operation instead of
@@ -123,7 +123,7 @@ as the UI does. Longer-running procedures on background threads, such as
 large write operations, can work with a single version of data for a
 longer period of time before committing their changes.
 
-## Memory Mapping
+### Memory Mapping
 
 Writes use [memory
 mapping](https://en.wikipedia.org/wiki/Memory-mapped_file) to avoid
@@ -136,7 +136,7 @@ Realm Database uses operating system level paging, trusting each
 operating system to implement memory mapping and persistence better than
 a single library could on its own.
 
-## Compaction
+### Compaction
 
 Realm Database automatically reuses free space that is no longer needed
 after database writes. However, realm files never shrink automatically,
@@ -150,9 +150,11 @@ on launch. However, Realm Database reclaims unused space for future
 writes, so compaction is only an optimization to conserve space
 on-device.
 
-## ACID Compliance
+### ACID Compliance
 
-Realm Database guarantees that transactions are `ACID <ACID>` compliant. This means that all committed write operations are
+Realm Database guarantees that transactions are
+[ACID](https://en.wikipedia.org/wiki/ACID) compliant.
+This means that all committed write operations are
 guaranteed to be valid and that clients don't see transient states in
 the event of a system crash. Realm Database complies with ACID with the
 following design choices:
@@ -172,22 +174,22 @@ following design choices:
   event of an app crash, for example, changes are not lost or
   corrupted.
 
-# Features
+## Features
 
 Realm Database supports many popular database features.
 
-## Queries
+### Queries
 
 You can query Realm Database using platform-native queries or a raw
 query language that works across platforms.
 
-## Indexes
+### Indexes
 
 Indexes are implemented as trees containing values of a given property
 instead of a unique internal object key. This means that indexes only
 support one column, and thus only one property, at a time.
 
-## Schemas
+### Schemas
 
 Every realm object has a schema. That schema is defined via a native
 object in your SDK's language. Object schemas can include embedded lists

@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const importsArr = [];
-fs.readdirSync(path.join(__dirname, "snippets")).forEach((snippet) => {
+fs.readdirSync(path.join(__dirname, "docs/snippets")).forEach((snippet) => {
   console.log(snippet);
   const snippetComponentName = snippet
     .split(/\.|-|_/)
