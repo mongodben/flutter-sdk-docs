@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkflutter_sdk_docs=self.webpackChunkflutter_sdk_docs||[]).push([[503],{8085:function(s){s.exports=JSON.parse('{"allTagsPath":"/flutter-sdk-docs/blog/tags","slug":"/flutter-sdk-docs/blog/tags/facebook","name":"facebook","count":1,"permalink":"/flutter-sdk-docs/blog/tags/facebook"}')}}]);
