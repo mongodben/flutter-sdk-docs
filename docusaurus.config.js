@@ -13,6 +13,7 @@ const config = {
   baseUrl: "/flutter-sdk-docs/",
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
+  trailingSlash: false, // Required to make site not give warning about broken links. unsure why - ben
   favicon: "img/realm-logo.png",
   organizationName: "mongodben", // Usually your GitHub org/user name.
   projectName: "flutter-sdk-docs", // Usually your repo name.
