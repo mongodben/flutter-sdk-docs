@@ -1,0 +1,24 @@
+{
+  "flutter": [
+    {
+      "type": "doc",
+      "label": "Flutter SDK (Alpha)",
+      "id": "intro"
+    },
+    {
+      "type": "doc",
+      "label": "Install Realm",
+      "id": "install"
+    },
+    {
+      "type": "doc",
+      "label": "Quick Start",
+      "id": "quick-start"
+    },
+    {
+      "type": "doc",
+      "label": "Realm Database",
+      "id": "realm-database"
+    }
+  ]
+}

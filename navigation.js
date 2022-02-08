@@ -7,7 +7,7 @@ const navBar = {
   items: [
     {
       label: "Get Started",
-      href: "/get-started/introduction_mobile",
+      href: "/get-started/introduction-mobile",
     },
     {
       type: "dropdown",
@@ -51,6 +51,10 @@ const navBar = {
       label: "App Services",
       position: "left",
       href: "https://docs.mongodb.com/realm/cloud/",
+    },
+    {
+      type: "docsVersionDropdown",
+      docsPluginId: "flutter",
     },
     {
       href: "https://github.com/mongodben/flutter-sdk-docs",

@@ -22,6 +22,13 @@ const config = {
       "@docusaurus/plugin-content-docs",
       {
         id: "flutter",
+        lastVersion: "current",
+        includeCurrentVersion: true,
+        versions: {
+          current: {
+            label: "Current",
+          },
+        },
         path: "flutter/docs",
         routeBasePath: "sdk/flutter/",
         sidebarPath: require.resolve("./sidebarsFlutter.js"),
@@ -96,6 +103,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          id: "main",
           routeBasePath: "/",
           path: "docs",
           sidebarPath: require.resolve("./sidebars.js"),
